@@ -5,7 +5,11 @@ import pandas as pd
 from pathlib import Path
 
 
-
+def home_path():
+    """使用者路徑"""
+    path = Path.home()
+    path = str(path)
+    return path
 
 def get_local_path():
     """取得目前工作目錄"""
@@ -26,6 +30,9 @@ def get_certain_path(aim, start):
 
 
 if __name__ == "__main__":
+    home_path = home_path()
+    print("\nHome path :", home_path)
+
     path_0 = get_local_path()
     print("\n目前工作目錄 :", path_0)
 
