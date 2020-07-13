@@ -1,6 +1,8 @@
 import os, glob
+import pathlib
 import numpy as np
 import pandas as pd
+from pathlib import Path
 
 
 
@@ -17,6 +19,10 @@ def get_absolute_path():
     path_3 = os.path.abspath("path_tip.py")
     return path_1, path_2, path_3
 
+def get_certain_path(aim, start):
+    """取得特定路段相對路徑"""
+    path = os.path.relpath(aim, start)
+    return path
 
 
 if __name__ == "__main__":
